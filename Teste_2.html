@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel ou Tesoura</title>
+    <link rel="stylesheet" href="./assets/css/pedra_papel_tesoura.css">
+    <script src="assets/js/pedra_papel_tesoura.js" defer></script>
+</head>
+
+<body>
+    <div style="display: flex;">    
+        <table class = "botoes1">
+            <thead>
+                <caption class="jogador1">Jogador 1</caption>
+            </thead>        
+                <tbody>
+                <tr>
+                    <td>
+                        <button class="button1" id = "Botao-Pedra-1">
+                            <strong><p>Pedra</p></strong>
+                            <img src="https://thumbs.dreamstime.com/b/ilustra%C3%A7%C3%A3o-do-elemento-gr%C3%A1fico-vetorial-isolado-de-rocha-com-caro%C3%A7o-desenho-animado-226880851.jpg" alt="Pedra">
+                        </button>
+                    </td>
+                    <td colspan = 2>
+                        <button class="button1" id="Botao-Papel-1">
+                            <strong><p>Papel</p></strong>
+                            <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/10313165-notebook-sheet-white-page-paper-list-from-notepad-flat-cartoon-icon-vetor.jpg" alt="Papel">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                <div >
+                        <td colspan = 2 style = "text-align: center;">
+                            <button class="button1" id="Botao-Tesoura-1">
+                                <strong><p>Tesoura</p></strong>
+                                <img src="https://st4.depositphotos.com/24038622/27074/v/1600/depositphotos_270744524-stock-illustration-scissors-illustration-cartoon-illustration-pair.jpg" alt="Tesoura">
+                            </button>
+                        </td>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class = "contagem-regressiva" style="margin: auto; display: flex;">
+           <div class="textoCont" style="margin: auto;">
+                <p style="font-size: 150px">3</p>
+            </div>
+        </div>
+        
+        <table class = "botoes2">
+            <thead>
+                <caption class="jogador2">Jogador 2</caption>
+            </thead>        
+                <tbody>
+                <tr>
+                    <td>
+                        <button class="button2" id="Botao-Pedra-2">
+                            <strong>
+                                <p>Pedra</p>
+                            </strong>
+                            <img src="https://thumbs.dreamstime.com/b/ilustra%C3%A7%C3%A3o-do-elemento-gr%C3%A1fico-vetorial-isolado-de-rocha-com-caro%C3%A7o-desenho-animado-226880851.jpg" alt="Pedra">
+                        </button>
+                    </td>
+                    <td colspan = 2>
+                        <button class="button2" id="Botao-Papel-2">
+                            <strong>
+                                <p>Papel</p>
+                            </strong>
+                            <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/10313165-notebook-sheet-white-page-paper-list-from-notepad-flat-cartoon-icon-vetor.jpg" alt="Papel">
+                            </button>
+                    </td>
+                </tr>
+                <tr>
+                <div >
+                        <td colspan = 2 style = "text-align: center;" id="Botao-Tesoura-2">
+                            <button class="button2">
+                                <strong>
+                                    <p>Tesoura</p>
+                                </strong>
+                                <img src="https://st4.depositphotos.com/24038622/27074/v/1600/depositphotos_270744524-stock-illustration-scissors-illustration-cartoon-illustration-pair.jpg" alt="Tesoura">
+                                </button>
+                        </td>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
