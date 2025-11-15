@@ -1,20 +1,23 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: rgb(221, 219, 219);
+    display: grid;
+    grid-column: 1fr 2fr 3fr;
+    padding: 20px;
 }
 
 img{
+    border-radius: 10px;
     height: 200px;
     width: 200px;
 }
-.botoes1{
-    height: 440px;
-    width: 440px;
-    background-color: lightblue;
-    padding-left: 0px;
-    border-radius: 10px;
-}
-.jogador1{
-    background-color: darkblue;
+
+.jogador1, .jogador2{
     color: white;
     height: 35px;
     text-align: center;
@@ -22,62 +25,232 @@ img{
     font-size: x-large;
     font-family: "cascadia code";
     border-radius:10px;
+    padding: 5px;
 }
+
+.jogador1{
+    background-color: darkblue;
+}
+
+.jogador2{
+    background-color: red;
+}
+
+.botoes1, .botoes2{
+    height: 300px;
+    width: 440px;
+    border-radius: 10px;
+}
+
+.botoes1{
+    background-color: lightblue;
+}
+
+.botoes2{
+    background-color: rgb(194, 84, 84);
+}
+
 .contagem-regressiva{
     text-align: center;
     background-color: blue;
-}
-.botoes2{
-    height: 440px;
-    width: 440px;
-    background-color: rgb(194, 84, 84);
-    padding-left: 0px;
+    width: 300px;
+    height: 300px;
     border-radius: 10px;
 }
-.jogador2{
-    background-color: red;
-    color: white;
-    height: 35px;
-    text-align: center;
-    padding-top: 7px;
-    font-size: x-large;
-    font-family: "cascadia code";
-    border-radius:10px;
-}
-p{
+
+#btn-txt{
     text-align: center;
     font-family: "comic sans ms";
     font-size:xx-large;
     margin:0px;
 }
-img{
+
+.button1, .button2{
+    border: none;
     border-radius: 10px;
 }
 
 .button1{
     background-color: lightblue;
-    border: none;
-    border-radius: 10px;
-}
-
-.button1:hover{
-    opacity: 0.8;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .button2{
     background-color:rgb(194, 84, 84);
-    border: none;
-    border-radius: 10px;
 }
 
-.button2:hover{
+.button1:hover, .button2:hover{
     opacity: 0.8;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.contagem-regressiva{
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5em;
+}
+
+/* Configuração da tela de regras */
+
+#AbrirModal{
     width: 300px;
-    height: 300px;
+    height: 50px;
+    display: block;
+    background-color: yellowgreen;
+    border: none;
     border-radius: 10px;
+    color: white;
+    font-family: Lucida console;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer button{
+    padding: 10px;
+    color: rgb(172, 172, 172);
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button:hover{
+    opacity: 0.8;
+}
+
+footer button:active{
+    opacity: 0.6;
+}
+
+#modal{
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform:translateX(-50%);
+    width: 600px;
+    max-width: 90vw;
+    flex-direction: column;
+    border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    font-family: lucida console;
+    z-index: 200;
+    display: flex;
+}
+
+#mHeader{
+    background-color: blue;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4em;
+    font-weight: 700;
+    color:white;
+}
+
+#mBody{
+    padding: 5px 0px 12px;
+}
+
+#mHeader h1{
+    font-family: HP Simplified;
+    color: rgb(53, 52, 52);
+    font-size: 32px;
+    color: white;
+}
+
+#modal footer{
+    padding: 10px 20px 12px;
+    border-top: 1px solid rgb(211, 208, 208);
+}
+
+#modal footer button{
+    float: right;
+    padding: 7px 12px;
+    background-color: blue;
+    color: white;
+    font-family: lucida console;
+    border: none;
+}
+
+#mShadow{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    z-index: 100;
+    display: flex;
+}
+
+.textoRegras{
+    font-family: comic sans ms;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.sub-title{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.borda{
+    border: 1px solid red;
+}
+
+.Regras-ComoJogar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+    gap: 1em;
+}
+
+.como-jogar{
+    padding-left: 20px;
+    display: grid;
+}
+
+.center{
+    text-align: center;
+    margin-bottom: 10px;
+    column-span: all;
+    padding-top: 5px;
+}
+
+.regras, .como-jogar{
+    background-color: lightblue;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.regras p{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: Verdana;
+}
+
+.btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana;
+}
+
+.textoRegras h3{
+    display: inline;
+    margin: 0px 10px 10px;
+}
+
+.textoRegras p{
+    font-size: 20px;
 }
