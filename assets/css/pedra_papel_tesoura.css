@@ -254,3 +254,41 @@ footer button:active{
 .textoRegras p{
     font-size: 20px;
 }
+
+@keyframes modalIn {
+    from{
+        transform: translate(-50%, -110%);
+    }
+    to{
+        transform: translate(-50%, 0);
+    }
+    
+}
+
+@keyframes modalOut {
+    from{
+        transform: translate(-50%, 0%);
+    }
+    to{
+        transform: translate(-50%, -110%);
+    }
+    
+}
+
+@keyframes msIn {
+    from{
+        opacity: 0;
+    }    
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes msOut {
+    from{
+        opacity: 1;
+    }    
+    to{
+        opacity: 0;
+    }
+}
