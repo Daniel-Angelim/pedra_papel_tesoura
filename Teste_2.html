@@ -43,14 +43,16 @@
         </table>
     <div id="menu">
 <!--Contagem regressiva-->
-        <div class = "contagem-regressiva" style="margin: auto; display: flex;">
+        <div id = "contagem-regressiva" style="margin: auto; display: flex;">
            <div class="textoCont" style="margin: auto;">
-                <p style="font-size: 150px" id="btn-txt">3</p>
+                <p style="font-size: 150px" id="txt-contagem">3</p>
             </div>
         </div>
 <!--Botão para ativar regras-->
         <button id="AbrirModal" onclick="ativarModal()">Visualizar Regras</button>
-    </div>
+<!-- Botão para iniciar o jogo -->
+        <button id="jogar" onclick="contador()">Iniciar jogo</button>
+        </div>
 <!--Tela de opções do jogador 2-->
         <table class = "botoes2">
             <thead>
@@ -116,9 +118,9 @@
                         <P>Jogador 2</P>
                         <p>A = Pedra</p>
                         <p>1 = Pedra</p>
-                        <p>B = Papel</p>
+                        <p>S = Papel</p>
                         <p>2 = Papel</p>
-                        <p>C = Tesoura</p>
+                        <p>D = Tesoura</p>
                         <p>3 = Tesoura</p>
                     </div>
                 </div>

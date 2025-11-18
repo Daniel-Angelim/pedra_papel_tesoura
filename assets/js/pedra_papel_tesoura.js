@@ -35,84 +35,54 @@ function fecharModal(){
 // Variáveis para a jogada
 let jogada_1
 let jogada_2
-let controle = 1
+let controle = 0
 let cont = 1
 // funcões de alteração de valor
 // jogador 1
 function pedra_1(){
-    if(controle === 1){
-        jogada_1 = 'pedra';
-        if (cont === 2){
-            verificar_resultado()
-        }
-    }
-    else{
-        alert("Espere o contador chegar a 0")
+    jogada_1 = 'pedra';
+    if (cont === 2){
+        verificar_resultado()
     }
     cont += 1;
 }
 function papel_1(){
-    if(controle === 1){
-        jogada_1 = 'papel';
-        if (cont === 2){
-            verificar_resultado()
-        }
-    }
-    else{
-        alert("Espere o contador chegar a 0")
+    jogada_1 = 'papel';
+    if (cont === 2){
+        verificar_resultado()
     }
     cont += 1;
 }
 function tesoura_1(){
-    if(controle === 1){
-        jogada_1 = 'tesoura';
-        if (cont === 2){
-            verificar_resultado()
-        }
-    }
-    else{
-        alert("Espere o contador chegar a 0")
+    jogada_1 = 'tesoura';
+    if (cont === 2){
+        verificar_resultado()
     }
     cont += 1;
 }
 // jogador 2
 function pedra_2(){
-    if(controle === 1){
-        jogada_2 = 'pedra';
-        if (cont === 2){
-            verificar_resultado()
-        }
-    }
-    else{
-        alert("Espere o contador chegar a 0")
+    jogada_2 = 'pedra';
+    if (cont === 2){
+        verificar_resultado()
     }
     cont += 1;
 }
 function papel_2(){
-    if(controle === 1){
-        jogada_2 = 'papel';
-        if (cont === 2){
-            verificar_resultado()
-        }
-    }
-    else{
-        alert("Espere o contador chegar a 0")
+    jogada_2 = 'papel';
+    if (cont === 2){
+        verificar_resultado()
     }
     cont += 1;
 }
 function tesoura_2(){
-    if(controle === 1){
-        jogada_2 = 'tesoura';
-        if (cont === 2){
-            verificar_resultado()
-        }
-    }
-    else{
-        alert("Espere o contador chegar a 0")
+    jogada_2 = 'tesoura';
+    if (cont === 2){
+        verificar_resultado()
     }
     cont += 1;
 }
-// Condicionais para definir a jogada
+    // Condicionais para definir a jogada
 // jogador 1
 pedra1.addEventListener('click', function(){
     pedra_1()
@@ -135,14 +105,63 @@ tesoura2.addEventListener('click', function(){
 })
 // Verficando resultado
 function verificar_resultado(){
-    if(jogada_1 === jogada_2 && jogada_1 != null){
-        alert("empate")
+    if (controle === 1){    
+        if(jogada_1 === jogada_2 && jogada_1 != null){
+            alert("empate")
+        }
+        else if((jogada_1 === "pedra" && jogada_2 ==="tesoura") || (jogada_1==="papel" && jogada_2==="pedra") ||(jogada_1==="tesoura" && jogada_2==="papel")){
+            alert("Jogador 1 venceu")
+        }
+        else if(jogada_1 != null){
+            alert("Jogador 2 venceu")
+        }
     }
-    else if((jogada_1 === "pedra" && jogada_2 ==="tesoura") || (jogada_1==="papel" && jogada_2==="pedra") ||(jogada_1==="tesoura" && jogada_2==="papel")){
-        alert("Jogador 1 venceu")
-    }
-    else if(jogada_1 != null){
-        alert("Jogador 2 venceu")
+    else{
+        alert("Espere o contador chegar a 0")
     }
     cont = 0;
+    setTimeout(document.getElementById('txt-contagem').textContent = "3", 1000);
+    setTimeout(controle = 0, 1000);
+    
+}
+// Adicionando jogadas pelo teclado
+document.onkeydown = teclado;
+function teclado(e){
+    if (e.keyCode == 65){
+        pedra_1();
+    }
+    else if (e.keyCode == 83){
+        papel_1();
+    }
+    else if (e.keyCode == 68){
+        tesoura_1()
+    }
+    else if (e.keyCode == 97){
+        pedra_2();
+    }
+    else if (e.keyCode == 98){
+        papel_2();
+    }
+    else if (e.keyCode == 99){
+        tesoura_2()
+    }
+}
+
+// Configurando contador
+
+function contador() {
+  let time = 3;
+  const Display = document.getElementById('txt-contagem');
+  
+  const intervalId = setInterval(function() {
+    if (time <= 0) {
+      clearInterval(intervalId);
+      Display.textContent = "0";
+      controle = 1;
+    } else {
+      Display.textContent = time;
+      time--;
+    }
+  }, 1000);
+  
 }
