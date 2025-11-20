@@ -201,7 +201,7 @@ footer button:active{
 #mShadow{
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.384);
+    background-color: rgba(0, 0, 0, 0.495);
     z-index: 100;
     display: flex;
 }
@@ -382,8 +382,17 @@ footer button:active{
 #resultado{
     text-align: center;
     font-size: 25px;
+    margin-bottom: 10px;
 }
 
 #jogada1, #jogada2{
     margin: 6px;
+}
+
+#placar-shadow{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.495);
+    z-index: 100;
+    display: none;
 }

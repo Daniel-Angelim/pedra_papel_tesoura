@@ -22,6 +22,7 @@ const result1 = document.getElementById('jogada1');
 const result2 = document.getElementById('jogada2');
 const resultFinal = document.getElementById('resultado');
 const placar = document.getElementById('placar');
+const placarShadow = document.getElementById('placar-shadow');
 // Função pra zerar resultados
 function zerar(){
     cont = 1;
@@ -34,6 +35,7 @@ function zerar(){
     }, 4000);
     setTimeout(() => {
         placar.style.display = "none";
+        placarShadow.style.display = "none";
     }, 3000);
 
 }
@@ -158,6 +160,7 @@ function verificar_resultado(){
             ponto2 += 1;
         }
         placar.style.display = "block";
+        placarShadow.style.display = "flex";
     }
     else{
         ativarAlert();
